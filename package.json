@@ -1,5 +1,5 @@
 {
-  "name": "material-colors",
+  "name": "material-colors-simple",
   "version": "1.0.0",
   "description": "Simple material colors map",
   "main": "materialColors.js",
