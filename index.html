@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Material Colors</title>
+  <style>
+    body {
+      font: .8em  roboto, arial, helvetica, sans-serif;
+    }
+    #colors>div {
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      margin: .2em 0;
+      text-shadow: 0 0 2px gray, 1px 1px 2px gray, -1px -1px 12px gray, 1px -1px 0px gray;
+      color: white;
+      text-align: center;
+    }
+    br {
+      clear: both;
+      margin: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Material Colors from the <a href="https://www.google.com/design/spec/style/color.html">Guideline</a></h1>
+  <div id="colors"></div>
+  <br>
+  <h4>Made by <a href="http://blog.fraguto.com.br">Octavio Turra</a>. See <a href="http://github.com/octavioturra/material-colors">Github</a>.</h4>
+  <script src="materialColors.js"></script>
+  <script>
+    var colors = document.querySelector('#colors');
+    var lastColor = null;
+    for(var color in window.materialColors){
+      var tokens = color.match(/([A-Z][a-z]+)([A-Z][a-z]+)?(\d)?/);
+      var currentColor = tokens[1];
+      if(currentColor!==lastColor) {
+        lastColor = currentColor;
+        var hr = document.createElement('br');
+        colors.appendChild(hr);
+      }
+      if(materialColors.hasOwnProperty(color)){
+        var div = document.createElement('div');
+        tokens.shift();
+        var text = tokens.join('<br />');
+        div.innerHTML = text;
+        div.style.backgroundColor = materialColors[color];
+        colors.appendChild(div);
+      }
+    }
+  </script>
+</body>
+</html>

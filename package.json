@@ -1,0 +1,26 @@
+{
+  "name": "material-colors",
+  "version": "1.0.0",
+  "description": "Simple material colors map",
+  "main": "materialColors.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/octavioturra/material-colors.git"
+  },
+  "keywords": [
+    "material",
+    "colors",
+    "style",
+    "swatches",
+    "swatch"
+  ],
+  "author": "Octavio Turra <octavio.turra@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octavioturra/material-colors/issues"
+  },
+  "homepage": "https://github.com/octavioturra/material-colors#readme"
+}
